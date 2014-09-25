@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String textInput = mEditText.getText().toString();
-                Toast.makeText(getBaseContext(), "Input: " + textInput, Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "New Input: " + textInput, Toast.LENGTH_LONG).show();
             }
         });
     }

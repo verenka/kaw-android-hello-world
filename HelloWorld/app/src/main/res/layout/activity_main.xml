@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/myFancyInput"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="40dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -27,6 +27,6 @@
         android:text="Click to Show"
         android:id="@+id/myFancyButton"
         android:layout_below="@+id/myFancyInput"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="40dp" />
 
 </RelativeLayout>
