@@ -11,21 +11,31 @@ import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
-    EditText mEditText;
-    Button mButton;
+    EditText myAwesomeEditText;
+    Button myAwesomeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mEditText = (EditText) findViewById(R.id.myFancyInput);
-        mButton = (Button) findViewById(R.id.myFancyButton);
+        myAwesomeEditText = (EditText) findViewById(R.id.myFancyInput);
+        myAwesomeButton = (Button) findViewById(R.id.myFancyButton);
+        myAwesomeButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                String textInput = myAwesomeEditText.getText().toString();
+                Toast.makeText(getBaseContext(),"Hallo "+ textInput +"!", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
 
-        mButton.setOnClickListener(new View.OnClickListener() {
+
+
+        myAwesomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String textInput = mEditText.getText().toString();
+                String textInput = myAwesomeEditText.getText().toString();
                 Toast.makeText(getBaseContext(), "New Input: " + textInput, Toast.LENGTH_LONG).show();
             }
         });
